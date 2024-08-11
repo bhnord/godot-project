@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://bjxq1b7l7kepd"]
+[gd_scene load_steps=16 format=3 uid="uid://bjxq1b7l7kepd"]
 
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_6uf8q"]
 [ext_resource type="Texture2D" uid="uid://ccno6di7yvaid" path="res://assets/sprites/Gangsters_1/Idle_2.png" id="1_q4bhj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e5uld"]
@@ -92,6 +93,7 @@ size = Vector2(20, 63)
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(-2, -19)
+script = ExtResource("1_6uf8q")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(6, -45)
