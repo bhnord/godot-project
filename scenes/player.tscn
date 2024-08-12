@@ -92,7 +92,9 @@ animations = [{
 size = Vector2(20, 63)
 
 [node name="player" type="CharacterBody2D"]
+z_index = 5
 position = Vector2(-2, -19)
+collision_layer = 2
 script = ExtResource("1_6uf8q")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
