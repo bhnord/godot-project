@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bejd2snc4kqho"]
+[gd_scene load_steps=2 format=3 uid="uid://dt0trpwk0c2vj"]
 
 [ext_resource type="Script" path="res://scripts/killzone.gd" id="1_pta4v"]
 
@@ -7,7 +7,8 @@ collision_mask = 2
 script = ExtResource("1_pta4v")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 2.5
+one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

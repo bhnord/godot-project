@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-
-
 const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
 
@@ -10,7 +8,14 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite = $AnimatedSprite2D
 
+var dying = false 
+func kill():
+	dying = true
+	animated_sprite.play("death")
+
 func _physics_process(delta):
+	if dying:
+		return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
