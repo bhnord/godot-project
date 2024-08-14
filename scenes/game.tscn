@@ -477,6 +477,7 @@ _data = {
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("1_0dxk4")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -492,10 +493,10 @@ position = Vector2(-1, -27)
 scale = Vector2(0.52, 0.52)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+visible = false
 position = Vector2(2, 22)
 zoom = Vector2(2, 2)
 limit_bottom = 120
-limit_smoothed = true
 
 [node name="Killzone" parent="." instance=ExtResource("5_qd72o")]
 position = Vector2(-37, 169)
@@ -527,3 +528,13 @@ libraries = {
 "": SubResource("AnimationLibrary_q1yx8")
 }
 autoplay = "move"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 21.0
+offset_top = 22.0
+offset_right = 183.0
+offset_bottom = 45.0
+text = "You collected X coins"
